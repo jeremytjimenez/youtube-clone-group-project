@@ -1,7 +1,11 @@
-import './App.css';
-import VideoPage from './Components/VideoPage'
+import "./App.css";
+import VideoPage from "./Components/VideoPage";
+// import { Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css"; 
+
 import Search from './Components/Search'
-// import { Router, Routes, Route } from 'react-router-dom'
+
 import axios from 'axios'
 
 import sampleData from './sampleData.json'
@@ -27,6 +31,8 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
+
       <Search fetchData={fetchData} setSearchData={setSearchData} searchData={searchData} />
       <VideoPage />
     </div>
