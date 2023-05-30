@@ -20,7 +20,6 @@ function Search({ fetchData, searchData }) {
         <form onSubmit={(e) => {
             e.preventDefault()
             fetchData(apiURL)
-            console.log(searchTerm)
             }}>
             <input id="searchbar" type="text" value={searchTerm} onChange={handleSearchChange} />
             <button type="submit">Search</button>
