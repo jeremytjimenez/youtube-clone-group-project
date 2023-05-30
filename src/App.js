@@ -1,9 +1,4 @@
 import './App.css';
-
-
-fetch(
-  `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
-);
 import VideoPage from './Components/VideoPage'
 import Search from './Components/Search'
 // import { Router, Routes, Route } from 'react-router-dom'
@@ -12,6 +7,10 @@ import axios from 'axios'
 import sampleData from './sampleData.json'
 
 import { useEffect, useState } from 'react'
+
+fetch(
+  `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
+);
 
 function App() {
   const [searchData, setSearchData] = useState({})
