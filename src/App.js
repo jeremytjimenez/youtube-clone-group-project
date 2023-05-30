@@ -1,20 +1,21 @@
-import "./App.css";
-import VideoPage from "./Components/VideoPage";
-// import { Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import "bootstrap/dist/css/bootstrap.min.css"; 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from 'react'
 
+import VideoPage from "./Components/VideoPage";
+import Navbar from "./Components/Navbar";
 import Search from './Components/Search'
+import Devbio from './Components/Devbio'
+
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css"; 
 
 import axios from 'axios'
 
 import sampleData from './sampleData.json'
 
-import { useEffect, useState } from 'react'
-
-fetch(
-  `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
-);
+// fetch(
+//   `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
+// );
 
 function App() {
   const [searchData, setSearchData] = useState({})
@@ -31,10 +32,15 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Search fetchData={fetchData} searchData={searchData} />} />
+          <Route path="/videos/:id" element={<VideoPage />} />
+          <Route path="/about-us" element={<Devbio />} />
+        </Routes>
+      </Router>
 
-      <Search fetchData={fetchData} setSearchData={setSearchData} searchData={searchData} />
-      <VideoPage />
     </div>
   );
 }
