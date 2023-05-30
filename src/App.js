@@ -14,7 +14,6 @@ function App() {
   async function fetchData(data) {
     try {
       const result = await axios.get(data);
-      // setSearchData(sampleData)
       setSearchData(result.data)
       return result.data;
   } catch (e) {
