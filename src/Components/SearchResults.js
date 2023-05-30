@@ -7,7 +7,6 @@ function SearchResults({ searchData }) {
     return (
         <SearchResult video={video} />
     )
-
   }
 
   return (
