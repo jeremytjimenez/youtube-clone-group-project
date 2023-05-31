@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Manaspace";
+  src: url(../Assets/manaspace/manaspc.ttf);
+}
+
+.title-card {
+  font-family: "Manaspace";
+  color: #f4ff61;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* .search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+} */
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}

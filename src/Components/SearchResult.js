@@ -1,5 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import "./Searches.css";
+
 
 function SearchResult(video) {
 
@@ -7,9 +9,9 @@ function SearchResult(video) {
 
   console.log(video.video)
   return (
-    <div>
+    <div className="search-results">
         <img alt="thumbnail" src={video.video.snippet.thumbnails.high.url} />
-        <h3 onClick={() => {navigate(`/videos/${video.video.id.videoId}`)}}>{!!(video.video.snippet.title) ? video.video.snippet.title : null}</h3>
+        <h3 className="title-card" onClick={() => {navigate(`/videos/${video.video.id.videoId}`)}}>{!!(video.video.snippet.title) ? video.video.snippet.title : null}</h3>
     </div>
   )
 }
