@@ -23,7 +23,7 @@ function Search({ fetchData, searchData, setSearchData }) {
             e.target.reset()
             fetchData(apiURL)
             }}>
-            <input id="searchbar" type="text" value={searchTerm} onChange={handleSearchChange} />
+            <input id="searchbar" type="text" value={searchTerm} onChange={handleSearchChange} required />
             <button type="submit">Search</button>
         </form>
 
