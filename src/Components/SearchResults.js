@@ -5,7 +5,7 @@ function SearchResults({ searchData }) {
 
   function searchResultFunction(video) {
     return (
-        <SearchResult video={video} />
+        <SearchResult key={video.id.videoId} video={video} />
     )
   }
 
