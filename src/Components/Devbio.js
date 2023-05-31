@@ -1,4 +1,5 @@
 import React from 'react'
+
 const devs = [
   {
     firstName: "Jeremy",
@@ -15,6 +16,8 @@ const devs = [
     gitHub: "https://github.com/HillaryB110",
   },
 ];
+
+
 const projectDescription = [
     {
         title : "JHILLMedia Youtube Clone Project",
