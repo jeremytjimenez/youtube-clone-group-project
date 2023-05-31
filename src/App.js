@@ -35,11 +35,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <Navbar setSearchData={setSearchData} />
         <Routes>
           <Route path="/" element={<Search fetchData={fetchData} searchData={searchData} setSearchData={setSearchData} />} />
           <Route path="/videos/:id" element={<VideoPage />} />
-          <Route path="/about-us" element={<Devbio />} />
+          <Route path="/about" element={<Devbio />} />
         </Routes>
       </Router>
 

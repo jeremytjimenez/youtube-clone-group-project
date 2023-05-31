@@ -27,7 +27,9 @@ function Search({ fetchData, searchData, setSearchData }) {
             <button type="submit">Search</button>
         </form>
 
-        {Object.entries(searchData).length > 0 ? <SearchResults searchData={searchData} setSearchData={setSearchData} /> : <p>No search results yet! Please submit a search above.</p>}
+        <div>
+            {Object.entries(searchData).length > 0 ? <SearchResults searchData={searchData} setSearchData={setSearchData} /> : <p>No search results yet! Please submit a search above.</p>}
+        </div>
     </div>
   )
 }
