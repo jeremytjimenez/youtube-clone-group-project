@@ -9,15 +9,12 @@ import { NavLink } from 'react-router-dom'
 function Navbar() {
   return (
     <nav
-      className="navbar nav
-      bar-expand-lg
-      navbar-light"
+      className="navbar navbar-expand-lg navbar-light"
       style={{ backgroundColor: "#0A0C37" }}
     >
-      <div className="container">
-
+      <div className="container d-flex align-items-center">
         <NavLink className="navbar-brand" to="/">
-           <img
+          <img
             style={{ width: 150 }}
             className="logo-image"
             src={BrandLogo}
@@ -25,34 +22,22 @@ function Navbar() {
           />
         </NavLink>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/"  style={{ color: "#F4FF61" }}>
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-
-
-              <NavLink className="nav-link" to="/about-us"style={{ color: "#F4FF61" }}>
-
-                About
-              </NavLink>
-            </li>
-          </ul>
-        </div>
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/" style={{ color: "#F4FF61" }}>
+              Home
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              className="nav-link"
+              to="/about-us"
+              style={{ color: "#F4FF61" }}
+            >
+              About
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </nav>
   );
