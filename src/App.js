@@ -11,7 +11,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import axios from 'axios'
 
-import sampleData from './sampleData.json'
+// import sampleData from './sampleData.json'
+
+
+fetch(
+  `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
+);
+
 
 function App() {
   const [searchData, setSearchData] = useState({})

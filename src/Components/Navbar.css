@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Karmatics";
+    src: url(../Assets/karmatic-arcade/ka1.ttf);
+}
+.nav-link {
+    font-family: "Karmatics", sans-serif;
+    font-size: medium ;
+    color: #F4FF61;
+}
