@@ -1,11 +1,11 @@
 import React from 'react'
 import SearchResult from './SearchResult'
 
-function SearchResults({ searchData, setSearchData }) {
+function SearchResults({ searchData, setSearchData, setCurrentVideo }) {
 
   function searchResultFunction(video) {
     return (
-        <SearchResult key={video.id.videoId} video={video} setSearchData={setSearchData} />
+        <SearchResult key={video.id.videoId} video={video} setSearchData={setSearchData} setCurrentVideo={setCurrentVideo}/>
     )
   }
 

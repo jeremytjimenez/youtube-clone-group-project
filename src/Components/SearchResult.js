@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import "./Searches.css";
 
 
-function SearchResult({ video, setSearchData }) {
+function SearchResult({ video, setSearchData, setCurrentVideo }) {
 
   const navigate = useNavigate()
 
   function navigateReset() {
+    console.log(video)
+    setCurrentVideo(video)
     setSearchData({})
     navigate(`/videos/${video.id.videoId}`)
   }
