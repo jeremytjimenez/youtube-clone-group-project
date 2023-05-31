@@ -34,7 +34,7 @@ function Devbio() {
           </h2>
           <p>Age: {dev.age}</p>
           <p>{dev.bio}</p>
-          <p>{dev.gitHub}</p>
+          <a href={dev.gitHub}>{dev.firstName}'s GitHub</a>
         </div>
       ))}
       <h3>Project Description:</h3>
