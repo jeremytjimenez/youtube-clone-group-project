@@ -4,7 +4,9 @@ const devs= [
         firstName: "Jeremy",
         lastName: "Jimenez",
         age: 24, 
-        bio: "Jeremy is a dev with ......",
+        bio: `Jeremy is a budding young software engineer with a strong interest in art, music and other creative mediums. 
+        His interest in technology spans back to playing video games on the computer as a young child with a drive to understand the inner workings of
+        the `,
         gitHub: "https://github.com/jeremytjimenez"
     },
     {

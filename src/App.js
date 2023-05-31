@@ -14,9 +14,9 @@ import axios from 'axios'
 // import sampleData from './sampleData.json'
 
 
-fetch(
-  `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
-);
+// fetch(
+//   `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
+// );
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Search fetchData={fetchData} searchData={searchData} />} />
+          <Route path="/" element={<Search fetchData={fetchData} searchData={searchData} setSearchData={setSearchData} />} />
           <Route path="/videos/:id" element={<VideoPage />} />
           <Route path="/about-us" element={<Devbio />} />
         </Routes>

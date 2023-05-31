@@ -1,15 +1,19 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function SearchResult(video) {
+function SearchResult({ video, setSearchData }) {
 
   const navigate = useNavigate()
 
-  console.log(video.video)
+  function navigateReset() {
+    setSearchData({})
+    navigate(`/videos/${video.id.videoId}`)
+  }
+
   return (
     <div>
-        <img alt="thumbnail" src={video.video.snippet.thumbnails.high.url} />
-        <h3 onClick={() => {navigate(`/videos/${video.video.id.videoId}`)}}>{!!(video.video.snippet.title) ? video.video.snippet.title : null}</h3>
+        <img alt="thumbnail" src={video.snippet.thumbnails.high.url} />
+        <h3 onClick={() => navigateReset()}>{!!(video.snippet.title) ? video.snippet.title : null}</h3>
     </div>
   )
 }
