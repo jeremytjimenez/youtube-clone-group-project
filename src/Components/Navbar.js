@@ -6,14 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { NavLink } from 'react-router-dom'
 
-function Navbar() {
+function Navbar({ setSearchData }) {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-light"
       style={{ backgroundColor: "#0A0C37" }}
     >
       <div className="container d-flex align-items-center">
-        <NavLink className="navbar-brand" to="/">
+        <NavLink onClick={() => {setSearchData({})}} className="navbar-brand" to="/">
           <img
             style={{ width: 150 }}
             className="logo-image"
@@ -24,14 +24,15 @@ function Navbar() {
 
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <NavLink className="nav-link" to="/" style={{ color: "#F4FF61" }}>
+            <NavLink onClick={() => {setSearchData({})}} className="nav-link" to="/" style={{ color: "#F4FF61" }}>
               Home
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink
+              onClick={() => {setSearchData({})}}
               className="nav-link"
-              to="/about-us"
+              to="/about"
               style={{ color: "#F4FF61" }}
             >
               About
