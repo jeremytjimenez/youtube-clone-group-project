@@ -12,7 +12,7 @@ function SearchResult({ video, setSearchData }) {
 
   return (
     <div>
-        <img alt="thumbnail" src={video.snippet.thumbnails.high.url} />
+        <img onClick={() => navigateReset()} alt="thumbnail" src={video.snippet.thumbnails.high.url} />
         <h3 onClick={() => navigateReset()}>{!!(video.snippet.title) ? video.snippet.title : null}</h3>
     </div>
   )
