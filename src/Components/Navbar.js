@@ -1,8 +1,7 @@
 import React from 'react'
 import "./Navbar.css";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-//  import {  NavLink } from "react-router-dom";
- import BrandLogo from "../Assets/jhillmedia_logo.png"
+import BrandLogo from "../Assets/jhillmedia_logo.png"
 
 import { NavLink } from 'react-router-dom'
 

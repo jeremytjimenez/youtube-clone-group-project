@@ -2,9 +2,9 @@ import React from 'react'
 import SearchResults from './SearchResults'
 import { useEffect, useState } from 'react'
 
-function Search({ fetchData, searchData, setSearchData }) {
+function Search({ fetchData, searchData, setSearchData, setCurrentVideo }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [apiURL, setApiURL] = useState(`https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&part=snippet&key=${process.env.YOUTUBE_API_KEY}`)
+  const [apiURL, setApiURL] = useState(`https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&part=snippet&key=AIzaSyDFg8wYGW2vl7Sn7g__s9YryxVVJ8GWuX0`)
 
   function handleSearchChange(e) {
     setSearchTerm(e.target.value.toLowerCase());
@@ -28,7 +28,7 @@ function Search({ fetchData, searchData, setSearchData }) {
         </form>
 
         <div>
-            {Object.entries(searchData).length > 0 ? <SearchResults searchData={searchData} setSearchData={setSearchData} /> : <p>No search results yet! Please submit a search above.</p>}
+            {Object.entries(searchData).length > 0 ? <SearchResults searchData={searchData} setSearchData={setSearchData} setCurrentVideo={setCurrentVideo} /> : <p>No search results yet! Please submit a search above.</p>}
         </div>
     </div>
   )
