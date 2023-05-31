@@ -8,9 +8,9 @@ import Search from './Components/Search'
 
 import axios from 'axios'
 
-import sampleData from './sampleData.json'
+// import sampleData from './sampleData.json'
 
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 
 fetch(
   `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`

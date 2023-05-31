@@ -1,11 +1,24 @@
 import React from 'react'
+import "./Navbar.css";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
+//  import {  NavLink } from "react-router-dom";
+ import BrandLogo from "../Assets/jhillmedia_logo.png"
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav
+      className="navbar nav
+      bar-expand-lg
+      navbar-light"
+      style={{ backgroundColor: "#0A0C37" }}
+    >
       <div className="container">
         <a className="navbar-brand" href="/">
-          Logo
+          <img
+            style={{ width: 150 }}
+            className="logo-image"
+            src={BrandLogo}
+            alt="JHillMedia"
+          />
         </a>
         <button
           className="navbar-toggler"
@@ -26,7 +39,11 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">
+              <a
+                className="nav-link"
+                href="/about"
+                style={{ color: "#F4FF61" }}
+              >
                 About
               </a>
             </li>
