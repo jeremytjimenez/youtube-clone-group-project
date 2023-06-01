@@ -17,21 +17,39 @@ function Search({ fetchData, searchData, setSearchData, setCurrentVideo }) {
 
   return (
     <div>
-        <form onSubmit={(e) => {
-            e.preventDefault()
-            setSearchTerm("")
-            e.target.reset()
-            fetchData(apiURL)
-            }}>
-            <input id="searchbar" type="text" value={searchTerm} onChange={handleSearchChange} required />
-            <button type="submit">Search</button>
-        </form>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          setSearchTerm("");
+          e.target.reset();
+          fetchData(apiURL);
+        }}
+      >
+        <input
+          id="searchbar"
+          type="text"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
 
-        <div>
-            {Object.entries(searchData).length > 0 ? <SearchResults searchData={searchData} setSearchData={setSearchData} setCurrentVideo={setCurrentVideo} /> : <p>No search results yet! Please submit a search above.</p>}
-        </div>
+      <div>
+        {Object.entries(searchData).length > 0 ? (
+          <SearchResults
+            searchData={searchData}
+            setSearchData={setSearchData}
+            setCurrentVideo={setCurrentVideo}
+          />
+        ) : (
+          <p className="search-message">
+            No search results yet! Please submit a search above.
+          </p>
+        )}
+      </div>
     </div>
-  )
+  );
 }
 
 export default Search
