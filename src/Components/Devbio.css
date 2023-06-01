@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Manaspace";
+  src: url(../Assets/manaspace/manaspc.ttf);
+}
+
+.dev-card {
+  border: solid 2px #f4ff61;
+  font-family: "Manaspace";
+  color: #f4ff61;
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-right: 150px;
+  padding-left: 15px;
+  padding-right: 15px;
+  
+}
+
+.dev-card:hover {
+  border: solid 3px #fee31a9b;
+  box-shadow: 0 0 25px #ffe101;
+  text-shadow: 0 0 3px #886c26d1, 0 0 5px #ae8c00;
+background-color: #050505;
+}

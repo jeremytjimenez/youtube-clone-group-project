@@ -7,3 +7,7 @@
     font-size: medium ;
     color: #F4FF61;
 }
+
+.nav-link:hover {
+ text-shadow: 0 0 3px #9a7824b9, 0 0 5px #ae8c00;
+}
