@@ -1,4 +1,5 @@
 .App {
+   cursor: url(icons8-space-fighter-80.png), auto;
   text-align: center;
   background-color:  #113e6e;
 }
@@ -37,3 +38,4 @@
     transform: rotate(360deg);
   }
 }
+
